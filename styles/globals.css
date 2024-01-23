@@ -1,27 +1,533 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  src: url("/fonts/GlacialIndifference-Bold.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  src: url("/fonts/GlacialIndifference-Regular.otf");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.locales {
+  position: fixed;
+  width: 100%;
+  top: 30px;
+  right: 30px;
+  text-align: right;
+}
+
+.locales span {
+  color: #b175ff;
+  font-size: 16px;
+  margin-right: 20px;
+  text-shadow: 1px 1px 10px black;
+}
+
+.locales span:last-child {
+  margin-right: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+section {
+  height: 100vh;
+}
+
+/* HERO */
+
+.hero,
+.agenda {
+  background-image: url("/images/Group 5.png");
+  background-color: #2d1674;
+  background-size: 100% 100%;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 100px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 104px;
+  line-height: normal;
+  color: white;
+}
+
+.hero h3 {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 32px;
+  color: #b175ff;
+}
+
+/* AGENDA */
+
+.agenda {
+}
+
+.agenda__wrapper {
+  padding-top: 80px;
+  padding-left: 200px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agenda__container-title {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+}
+
+.agenda__container-subtitle {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+  color: #b175ff;
+}
+
+.agenda__navbar-nav {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+/* WhatSleep */
+
+.whatsleep {
+  background-image: url("/images/section-1-bg.png");
+  /*background-color: #2d1674;*/
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.whatsleep__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.whatsleep__images {
+  margin-right: 100px;
+}
+
+.whatsleep__images img {
+  min-width: 550px;
+  height: 380px;
+}
+
+.whatsleep__images img:last-of-type {
+  margin-top: 20px;
+}
+
+.whatsleep__container-title {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+}
+
+.whatsleep__container-subtitle {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+  color: #2d1674;
+  text-transform: uppercase;
+}
+
+.whatsleep__container-text {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+/* PHASES */
+
+.phases {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.phases-col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phases-col img {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+.phases-col-title {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.phases-col-1 {
+  background-color: #2d1674;
+}
+
+.phases-col-2 {
+  background-color: #ac7ba6;
+}
+
+.phases-col-1 h1 {
+  color: #b175ff;
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.phases-col-2 h1 {
+  color: #2d1674;
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.hover-tab {
+  border-radius: 90px;
+  padding: 80px;
+}
+
+.phases-col-1-hover {
+  border-radius: 90px;
+  background-color: white;
+  position: absolute;
+  /*visibility: hidden;*/
+  right: 5%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  width: 40%;
+}
+
+.phases-col-2-hover {
+  border-radius: 90px;
+  background-color: white;
+  position: absolute;
+  /*visibility: hidden;*/
+  left: 5%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  width: 40%;
+}
+
+.phases-col-1:hover .phases-col-1-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.phases-col-2:hover .phases-col-2-hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-tab p {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+}
+
+.phases-main-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+}
+
+/*Importance Sleep*/
+
+.importance-sleep {
+  height: 100vh;
+  background-image: url("/images/Group 5.png");
+  background-color: #2d1674;
+
+  background-position: center;
+  background-size: 100% 100%;
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.importance-sleep h1 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+  margin-right: 100px;
+}
+
+.importance-sleep h2 {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 28px;
+  color: #b175ff;
+  text-transform: uppercase;
+}
+
+.importance-sleep p {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 24px;
+  color: #fff;
+}
+
+.importance-sleep-reasons {
+  max-width: 800px;
+}
+
+.importance-sleep-reason:not(:first-child) {
+  margin-top: 20px;
+}
+
+.sleepstages {
+  background-color: #2d1674;
+  padding-top: 100px;
+}
+
+.sleepstages h1 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 42px;
+  color: #fff;
+}
+
+.sleepstages h2 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+  color: #b175ff;
+  text-transform: uppercase;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 150px;
+}
+
+.line-container {
+  width: 100%;
+  margin-top: 150px;
+}
+
+.line {
+  display: block;
+  border-top: 10px solid #b175ff;
+  position: relative;
+}
+
+.stages {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stage {
+  width: 30%;
+  /*text-align: justify;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stage-circle {
+  border-radius: 50%;
+  background-color: #b175ff;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -25px;
+}
+
+.stage h3 {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 28px;
+  margin-top: 20px;
+  color: #b175ff;
+}
+
+.stage p {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 21px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.impact-health {
+  background-color: #2d1674;
+  padding-top: 100px;
+  position: relative;
+}
+
+.impact-health-title {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.impact-health-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.impact-health-container h2 {
+  color: #b175ff;
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.health {
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.health:hover {
+  transform: scale(1.1);
+}
+
+#modal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+#modal-content {
+  background-color: #fff;
+  border-radius: 90px;
+  padding: 80px;
+  width: 40%;
+}
+
+#modal-content h2 {
+  color: #b175ff;
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#modal-content ol {
+  list-style: decimal;
+  list-style-position: inside;
+  margin-top: 10px;
+}
+
+#modal-content ol li,
+#modal-content p {
+  font-family: "Glacial Indifference";
+  font-weight: normal;
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+}
+
+#modal-content p {
+  margin-top: 10px;
+}
+
+#modal-content ol li span {
+  font-weight: bold;
+}
+
+.sleeprecommendations {
+  /*background-color: #2d1674;*/
+  background-image: url("/images/rec-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sleeprecommendations h1 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.video-wrapper {
+	text-shadow: 1px 1px 100px black;
 }
