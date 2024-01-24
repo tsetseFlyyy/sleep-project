@@ -56,8 +56,11 @@ section {
 .hero,
 .agenda {
   background-image: url("/images/Group 5.png");
-  background-color: #2d1674;
   background-size: 100% 100%;
+}
+
+.agenda {
+  background-color: #2d1674;
 }
 
 .hero__container {
@@ -124,8 +127,8 @@ section {
 /* WhatSleep */
 
 .whatsleep {
-  background-image: url("/images/section-1-bg.png");
-  /*background-color: #2d1674;*/
+  /*background-image: url("/images/section-1-bg.png");*/
+  background-color: #2d1674;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -137,7 +140,7 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  padding-top: 80px;
+  padding-top: 150px;
   padding-left: 200px;
   padding-right: 200px;
 }
@@ -148,7 +151,7 @@ section {
 
 .whatsleep__images img {
   min-width: 550px;
-  height: 380px;
+  /*height: 380px;*/
 }
 
 .whatsleep__images img:last-of-type {
@@ -166,8 +169,10 @@ section {
   font-family: "Glacial Indifference";
   font-weight: bold;
   font-size: 30px;
-  color: #2d1674;
+  color: #b175ff;
   text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .whatsleep__container-text {
@@ -291,7 +296,7 @@ section {
 
 .importance-sleep {
   height: 100vh;
-  background-image: url("/images/Group 5.png");
+  /*background-image: url("/images/Group 5.png");*/
   background-color: #2d1674;
 
   background-position: center;

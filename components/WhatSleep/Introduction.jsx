@@ -13,6 +13,7 @@ const Introduction = () => {
             src="https://cdn.bcm.edu/sites/default/files/2023-08/sleep-photo.jpg"
             alt="two"
           />*/}
+			 <img src="/images/Vector.png" alt="sleeping girls" />
 			 
         </div>
         <div className="whatsleep__container">
