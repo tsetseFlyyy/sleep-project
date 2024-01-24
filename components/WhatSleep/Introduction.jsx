@@ -5,14 +5,15 @@ const Introduction = () => {
     <section className="whatsleep">
       <div className="whatsleep__wrapper">
         <div className="whatsleep__images">
-          <img
+          {/*<img
             src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/MYQEU44PIHOFGIR7ND52GTUYZ4.jpg&w=1200"
             alt="one"
           />
           <img
             src="https://cdn.bcm.edu/sites/default/files/2023-08/sleep-photo.jpg"
             alt="two"
-          />
+          />*/}
+			 
         </div>
         <div className="whatsleep__container">
           <h1 className="whatsleep__container-title">Introduction</h1>

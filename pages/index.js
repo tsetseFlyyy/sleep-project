@@ -12,6 +12,8 @@ import ImportanceSleep from "@/components/ImportanceSleep/ImportanceSleep";
 import SleepStages from "@/components/SleepStages/SleepStages";
 import ImpactHealth from "@/components/ImpactHealth/ImpactHealth";
 import SleepRecommendations from "@/components/SleepRecommendations/SleepRecommendations";
+import Consequences from "@/components/Consequences/Consequences";
+import Conclusion from "@/components/Conclusion/Conclustion";
 
 export default function Home() {
   const [rendered, setRendered] = useState(false);
@@ -45,7 +47,9 @@ export default function Home() {
         <Phases />
         <SleepStages />
         <ImpactHealth />
+        <Consequences />
         <SleepRecommendations />
+        <Conclusion />
       </main>
     );
   return null;
