@@ -3,13 +3,9 @@ import React from "react";
 const Phases = () => {
   return (
     <section className="phases">
-		<h1 className="phases-main-title">Sleep Phases</h1>
+      <h1 className="phases-main-title">Sleep Phases</h1>
       <div className="phases-col-1 phases-col">
-        <img
-          className="phases-col-1-img"
-          src="https://media-public.canva.com/MACZWNJeHmI/1/screen.jpg"
-          alt=""
-        />
+        <div className="phases-col-1-img"></div>
         <div className="phases-col-1-hover hover-tab">
           <h1>Non-REM Sleep</h1>
           <p>
@@ -24,11 +20,7 @@ const Phases = () => {
         <h1 className="phases-col-title">NON-REM SLEEP</h1>
       </div>
       <div className="phases-col-2 phases-col">
-        <img
-          className="phases-col-2-img"
-          src="https://media-public.canva.com/MACZhyPXPRk/1/screen.jpg"
-          alt=""
-        />
+        <div className="phases-col-2-img"></div>
         <div className="phases-col-2-hover hover-tab">
           <h1>REM Sleep</h1>
           <p>

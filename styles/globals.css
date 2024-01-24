@@ -190,7 +190,20 @@ section {
   justify-content: space-between;
   position: relative;
 }
-
+.phases-col-1-img {
+  background-image: url("https://media-public.canva.com/MACZWNJeHmI/1/screen.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.phases-col-2-img {
+  background-image: url("https://media-public.canva.com/MACZhyPXPRk/1/screen.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
 .phases-col {
   width: 50%;
   display: flex;
@@ -219,7 +232,8 @@ section {
 }
 
 .phases-col-2 {
-  background-color: #ac7ba6;
+  /*   background-color: #ac7ba6; */
+  background-color: #2d1674; /*IDK, looks better*/
 }
 
 .phases-col-1 h1 {
@@ -230,7 +244,8 @@ section {
 }
 
 .phases-col-2 h1 {
-  color: #2d1674;
+  /*   color: #2d1674; */
+  color: #b175ff;
   font-family: "Glacial Indifference";
   font-weight: bold;
   font-size: 30px;
