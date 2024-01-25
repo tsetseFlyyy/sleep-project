@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero__title">
           <h3>ASTANA IT UNIVERSITY</h3>
           <h1 dangerouslySetInnerHTML={{ __html: t('hero_title')}}></h1>
-          <h3>CSE-2301-M & CSE-2302-M</h3>
+          <h3>Shalkar & Didar & Bauyrzhan (CSE-2301) & Temirlan (CSE-2302)</h3>
         </div>
         <div>
           <svg

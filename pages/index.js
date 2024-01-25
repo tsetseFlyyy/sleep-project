@@ -14,6 +14,7 @@ import ImpactHealth from "@/components/ImpactHealth/ImpactHealth";
 import SleepRecommendations from "@/components/SleepRecommendations/SleepRecommendations";
 import Consequences from "@/components/Consequences/Consequences";
 import Conclusion from "@/components/Conclusion/Conclustion";
+import Chart from "@/components/Chart/Chart";
 
 export default function Home() {
   const [rendered, setRendered] = useState(false);
@@ -48,6 +49,7 @@ export default function Home() {
         <SleepStages />
         <ImpactHealth />
         <Consequences />
+        <Chart />
         <SleepRecommendations />
         <Conclusion />
       </main>
