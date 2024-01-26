@@ -15,7 +15,7 @@ import SleepRecommendations from "@/components/SleepRecommendations/SleepRecomme
 import Consequences from "@/components/Consequences/Consequences";
 import Conclusion from "@/components/Conclusion/Conclustion";
 import Chart from "@/components/Chart/Chart";
-
+import { StyledEngineProvider } from "@mui/material/styles";
 export default function Home() {
   const [rendered, setRendered] = useState(false);
   useEffect(() => {
@@ -23,36 +23,38 @@ export default function Home() {
   }, []);
   if (rendered)
     return (
-      <main>
-        <div className="locales">
-          <span>
-            <Link href="" locale="kk">
-              KK
-            </Link>
-          </span>
-          <span>
-            <Link href="" locale="ru">
-              RU
-            </Link>
-          </span>
-          <span>
-            <Link href="" locale="en">
-              EN
-            </Link>
-          </span>
-        </div>
-        <Hero />
-        <Agenda />
-        <Introduction />
-        <ImportanceSleep />
-        <Phases />
-        <SleepStages />
-        <ImpactHealth />
-        <Consequences />
-        <Chart />
-        <SleepRecommendations />
-        <Conclusion />
-      </main>
+      <StyledEngineProvider injectFirst>
+        <main>
+          <div className="locales">
+            <span>
+              <Link href="" locale="kk">
+                KK
+              </Link>
+            </span>
+            <span>
+              <Link href="" locale="ru">
+                RU
+              </Link>
+            </span>
+            <span>
+              <Link href="" locale="en">
+                EN
+              </Link>
+            </span>
+          </div>
+          <Hero />
+          <Agenda />
+          <Introduction />
+          <ImportanceSleep />
+          <Phases />
+          <SleepStages />
+          <ImpactHealth />
+          <Consequences />
+          <Chart />
+          <SleepRecommendations />
+          <Conclusion />
+        </main>
+      </StyledEngineProvider>
     );
   return null;
 }

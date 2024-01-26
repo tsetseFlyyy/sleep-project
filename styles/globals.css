@@ -416,6 +416,23 @@ section {
   justify-content: center;
 }
 
+.chart__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.css-10vg0a6-MuiResponsiveChart-container {
+  width: fit-content;
+}
+
+.css-10vg0a6-MuiResponsiveChart-container > svg {
+	width: fit-content;
+}
+
 .chart-title {
   width: fit-content;
 }
