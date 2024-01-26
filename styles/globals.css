@@ -62,7 +62,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-left: 200px;
   padding-right: 100px;
   align-items: center;
@@ -409,11 +409,24 @@ section {
 
 /* CHART */
 
-.charts {
+.chart {
   background-color: #2d1674;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.chart-title {
+  width: fit-content;
+}
+
+.chart-title h1 {
+  font-family: "Glacial Indifference";
+  font-weight: bold;
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
 }
 
 .impact-health {
@@ -467,10 +480,10 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
   align-items: center;
   justify-content: center;
   display: none;
+  z-index: 100;
 }
 
 #modal-content {

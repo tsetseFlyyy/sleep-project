@@ -2,10 +2,10 @@ import React from "react";
 
 const Chart = () => {
   return (
-    <section className="charts">
-      <div className="charts-title">
+    <section className="chart">
+      <div className="chart-title">
         <svg
-          width="500"
+          width="400"
           height="315"
           viewBox="0 0 500 315"
           fill="none"
