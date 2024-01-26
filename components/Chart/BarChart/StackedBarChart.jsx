@@ -17,11 +17,11 @@ const xLabels = [
 export default function StackedBarChart() {
   return (
     <BarChart
-      width={800}
-      height={500}
+      width={1700}
+      height={700}
       series={[
-        { data: pData, label: "min", id: "pvId", stack: "total" },
-        { data: uData, label: "max", id: "uvId", stack: "total" },
+        { data: pData, label: "min", id: "pvId", stack: "total1" },
+        { data: uData, label: "max", id: "uvId", stack: "total2" },
       ]}
       xAxis={[{ data: xLabels, scaleType: "band" }]}
     />

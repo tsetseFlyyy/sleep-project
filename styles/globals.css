@@ -23,6 +23,18 @@
   box-sizing: border-box;
 }
 
+text {
+  fill: #fff !important;
+}
+
+.css-1k2u9zb-MuiChartsAxis-root .MuiChartsAxis-line {
+  stroke: #fff !important;
+}
+
+.css-1k2u9zb-MuiChartsAxis-root .MuiChartsAxis-tick {
+  stroke: #fff !important;
+}
+
 .locales {
   position: fixed;
   width: 100%;
@@ -414,14 +426,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .chart__container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  /*width: 70%;*/
   margin: 0 auto;
 }
 
@@ -430,20 +443,17 @@ section {
 }
 
 .css-10vg0a6-MuiResponsiveChart-container > svg {
-	width: fit-content;
-}
-
-.chart-title {
   width: fit-content;
 }
 
-.chart-title h1 {
+.chart__container h1 {
   font-family: "Glacial Indifference";
   font-weight: bold;
   font-size: 38px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #fff;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .impact-health {
