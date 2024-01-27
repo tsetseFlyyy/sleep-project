@@ -27,17 +27,17 @@ export default function Home() {
         <main>
           <div className="locales">
             <span>
-              <Link href="" locale="kk">
+              <Link href="#" locale="kk">
                 KK
               </Link>
             </span>
             <span>
-              <Link href="" locale="ru">
+              <Link href="#" locale="ru">
                 RU
               </Link>
             </span>
             <span>
-              <Link href="" locale="en">
+              <Link href="#" locale="en">
                 EN
               </Link>
             </span>

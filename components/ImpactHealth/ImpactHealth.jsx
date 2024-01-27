@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 const ImpactHealth = () => {
+  const { t, i18n } = useTranslation();
   const [modalTitle, setModalTitle] = useState();
   const [modalList, setModalList] = useState();
   const [modalConclusion, setModalConclusion] = useState();
@@ -9,32 +11,28 @@ const ImpactHealth = () => {
 
   const setModalPhysical = () => {
     modalRef.current.style.display = "flex";
-    setModalTitle("Physical Restoration");
+    setModalTitle("physical_restoration");
     setModalList([
-      "<span>Tissue Repair:</span> During deep sleep, the body releases growth hormone, promoting tissue repair and regeneration.",
-      "<span>Energy Conservation:</span> Sleep helps conserve energy, supporting overall physical well-being and stamina.",
-      "<span>Immune System Support:</span> Adequate sleep enhances the immune system's ability to defend against infections and illnesses.",
-      "<span>Hormone Regulation:</span> Sleep influences the balance of hormones involved in metabolism, appetite regulation, and stress response.",
-      "<span>Cardiovascular Health:</span> Quality sleep contributes to a healthy cardiovascular system, regulating blood pressure and reducing the risk of heart-related issues.",
+      "modal_physical_text1",
+      "modal_physical_text2",
+      "modal_physical_text3",
+      "modal_physical_text4",
+      "modal_physical_text5",
     ]);
-    setModalConclusion(
-      "Highlighting the impact of sleep on physical health emphasizes its role in promoting overall vitality and resilience."
-    );
+    setModalConclusion("modal_physical_conslusion");
   };
 
   const setModalMental = () => {
     modalRef.current.style.display = "flex";
-    setModalTitle("Mental Well-being");
+    setModalTitle("mental_well-being");
     setModalList([
-      "<span>Emotional Resilience:</span> Sufficient sleep fosters emotional resilience, reducing susceptibility to stress and mood disorders.",
-      "<span>Memory Consolidation:</span> REM sleep, in particular, plays a crucial role in consolidating and organizing memories, aiding cognitive function.",
-      "<span>Stress Reduction:</span> Quality sleep is linked to lower levels of cortisol, the stress hormone, contributing to better stress management.",
-      "<span>Improved Concentration:</span> Adequate sleep enhances focus, attention, and overall cognitive performance in daily activities.",
-      "<span>Emotional Processing:</span> Dreams during REM sleep facilitate emotional processing, helping individuals cope with and understand emotions.",
+      "modal_mental_text1",
+      "modal_mental_text2",
+      "modal_mental_text3",
+      "modal_mental_text4",
+      "modal_mental_text5",
     ]);
-    setModalConclusion(
-      "By addressing the impact of sleep on mental health, this slide emphasizes the crucial connection between quality sleep and emotional well-being."
-    );
+    setModalConclusion("modal_mental_conslusion");
   };
 
   window.addEventListener("click", function (event) {
@@ -45,7 +43,7 @@ const ImpactHealth = () => {
 
   return (
     <section className="impact-health">
-      <h1 className="impact-health-title">Impact on health</h1>
+      <h1 className="impact-health-title">{t("impact_on_health")}</h1>
       <div className="impact-health-container">
         <div className="health" onClick={setModalPhysical}>
           <svg
@@ -187,7 +185,7 @@ const ImpactHealth = () => {
               </g>{" "}
             </g>
           </svg>
-          <h2>Physical Health</h2>
+          <h2>{t("physical_health")}</h2>
         </div>
         <div className="health" onClick={setModalMental}>
           <svg
@@ -270,19 +268,19 @@ const ImpactHealth = () => {
               stroke-linejoin="round"
             />
           </svg>
-          <h2>Mental Health</h2>
+          <h2>{t("mental_health")}</h2>
         </div>
       </div>
       <div id="modal" ref={modalRef}>
         <div id="modal-content">
-          <h2>{modalTitle}</h2>
+          <h2>{t(modalTitle)}</h2>
           <ol>
             {modalList &&
               modalList.map((item, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
+                <li key={index} dangerouslySetInnerHTML={{ __html: t(item) }}></li>
               ))}
           </ol>
-          <p>{modalConclusion}</p>
+          <p>{t(modalConclusion)}</p>
         </div>
       </div>
     </section>

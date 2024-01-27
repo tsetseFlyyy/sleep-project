@@ -5,27 +5,28 @@ const Agenda = () => {
   const { t, i18n } = useTranslation();
 
   const navs = [
-    "Introduction",
-    "Importance of Sleep",
-    "Sleep Phases",
-    "Sleep Stages",
-    "Impact on Physical Health",
-    "Impact on Mental Health",
-    "Sleep Recommendations",
-    "Negative Effects of Sleep Deprivation",
-    "Conclusions",
+    "introduction",
+    "why_sleep_important",
+    "sleep_phases",
+    "sleep_stages",
+    "impact_on_health",
+    "sleep_recommendations",
+    "negative_effects",
+    "conclusion",
   ];
 
   return (
     <section className="agenda">
       <div className="agenda__wrapper">
         <div className="agenda__container">
-          <h1 className="agenda__container-title">AGENDA</h1>
-          <h2 className="agenda__container-subtitle">Points of discussion</h2>
+          <h1 className="agenda__container-title">{t("agenda")}</h1>
+          <h2 className="agenda__container-subtitle">
+            {t("points_of_discussion")}
+          </h2>
           <ol className="agenda__navbar">
             {navs.map((nav, index) => (
               <li className="agenda__navbar-nav pointer" key={index}>
-                {nav}
+                {t(nav)}
               </li>
             ))}
           </ol>

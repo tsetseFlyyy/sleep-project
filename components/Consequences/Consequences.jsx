@@ -6,24 +6,26 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 
 import { Grid, Pagination } from "swiper/modules";
+import { useTranslation } from "next-i18next";
 
 const Consequences = () => {
+  const { t, i18n } = useTranslation();
   const consequencesArray = [
-    "Impaired Cognitive Function",
-    "Increased Stress Levels",
-    "Weakened Immune System",
-    "Weight Gain and Metabolic Issues",
-    "Cardiovascular Risks",
-    "Mood Disorders",
-    "Reduced Physical Performance",
-    "Increased Risk of Accidents",
-    "Bad Impact on Mental Health",
-    "Decreased Quality of Life",
+    "consequence1",
+    "consequence2",
+    "consequence3",
+    "consequence4",
+    "consequence5",
+    "consequence6",
+    "consequence7",
+    "consequence8",
+    "consequence9",
+    "consequence10",
   ];
 
   return (
     <section className="consequences">
-      <h1 className="consequences-title title">Dangers of Sleep Deprivation</h1>
+      <h1 className="consequences-title title">{t("negative_effects")}</h1>
       <Swiper
         slidesPerView={3}
         grid={{
@@ -38,7 +40,7 @@ const Consequences = () => {
       >
         {consequencesArray.map((item, index) => (
           <SwiperSlide key={index}>
-            <h3 className="swiper-slide-title">{item}</h3>
+            <h3 className="swiper-slide-title">{t(item)}</h3>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,12 +1,14 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 const SleepStages = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section className="sleepstages">
       <div className="top-container">
         <div className="title-container">
-          <h1>Stages of the Sleep Cycle</h1>
-          <h2>There are four stages.</h2>
+          <h1>{t("stages_sleep")}</h1>
+          <h2>{t("four_stages")}</h2>
         </div>
         <svg
           width="450"
@@ -164,26 +166,23 @@ const SleepStages = () => {
           <div className="stages">
             <div className="stage">
               <div className="stage-circle"></div>
-              <h3>Stage 1: Light Sleep</h3>
-              <p>Transitioning to sleep, reduced muscle activity.</p>
+              <h3>{t("stage1")}</h3>
+              <p>{t("stage1_text")}</p>
             </div>
             <div className="stage">
               <div className="stage-circle"></div>
-              <h3>Stage 2: True Sleep</h3>
-              <p>Deeper than Stage 1, regular heart rate, sleep spindles.</p>
+              <h3>{t("stage2")}</h3>
+              <p>{t("stage2_text")}</p>
             </div>
             <div className="stage">
               <div className="stage-circle"></div>
-              <h3>Stage 3: Deep Sleep</h3>
-              <p>Most restorative, slow delta waves, physical recovery.</p>
+              <h3>{t("stage3")}</h3>
+              <p>{t("stage3_text")}</p>
             </div>
             <div className="stage">
               <div className="stage-circle"></div>
-              <h3>REM Sleep</h3>
-              <p>
-                Intense brain activity, vivid dreams, temporary muscle
-                paralysis.
-              </p>
+              <h3>{t("rem_sleep")}</h3>
+              <p>{t("stage4_text")}</p>
             </div>
           </div>
         </span>
