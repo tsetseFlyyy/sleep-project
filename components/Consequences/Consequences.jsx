@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Grid, Pagination } from "swiper/modules";
 import { useTranslation } from "next-i18next";
 
-const Consequences = () => {
+const Consequences = ({ id }) => {
   const { t, i18n } = useTranslation();
   const consequencesArray = [
     "consequence1",
@@ -24,7 +24,7 @@ const Consequences = () => {
   ];
 
   return (
-    <section className="consequences">
+    <section className="consequences" id={id}>
       <h1 className="consequences-title title">{t("negative_effects")}</h1>
       <Swiper
         slidesPerView={3}

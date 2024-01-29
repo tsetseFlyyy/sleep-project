@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "next-i18next";
 
-const Phases = () => {
+const Phases = ({id}) => {
   const { t, i18n } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [tabTitle, setTabTitle] = useState();
@@ -20,7 +20,7 @@ const Phases = () => {
   };
 
   return (
-    <section className="phases">
+    <section className="phases" id={id}>
       <h1 className="phases-main-title">{t("sleep_phases")}</h1>
       <div className="phases-wrapper">
         <div

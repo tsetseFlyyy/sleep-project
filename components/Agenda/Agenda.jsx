@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 
-const Agenda = () => {
+const Agenda = ({ id }) => {
   const { t, i18n } = useTranslation();
 
   const navs = [
@@ -10,13 +10,24 @@ const Agenda = () => {
     "sleep_phases",
     "sleep_stages",
     "impact_on_health",
-    "sleep_recommendations",
     "negative_effects",
+    "normal_amount",
+    "sleep_recommendations",
     "conclusion",
   ];
 
+  const scrollToSection = (e, targetId) => {
+    e.preventDefault();
+    const targetSection = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section className="agenda">
+    <section className="agenda" id={id}>
       <div className="agenda__wrapper">
         <div className="agenda__container">
           <h1 className="agenda__container-title">{t("agenda")}</h1>
@@ -25,9 +36,13 @@ const Agenda = () => {
           </h2>
           <ol className="agenda__navbar">
             {navs.map((nav, index) => (
-              <li className="agenda__navbar-nav pointer" key={index}>
-                {t(nav)}
-              </li>
+              <a
+                href={`#section${index + 1}`}
+                key={index}
+                onClick={(e) => scrollToSection(e, `section${index + 1}`)}
+              >
+                <li className="agenda__navbar-nav pointer">{t(nav)}</li>
+              </a>
             ))}
           </ol>
         </div>

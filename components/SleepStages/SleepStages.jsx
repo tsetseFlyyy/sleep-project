@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 
-const SleepStages = () => {
+const SleepStages = ({ id }) => {
   const { t, i18n } = useTranslation();
   return (
-    <section className="sleepstages">
+    <section className="sleepstages" id={id}>
       <div className="top-container">
         <div className="title-container">
           <h1>{t("stages_sleep")}</h1>

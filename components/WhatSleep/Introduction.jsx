@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 
-const Introduction = () => {
+const Introduction = ({ id }) => {
   const { t, i18n } = useTranslation();
   return (
-    <section className="whatsleep">
+    <section className="whatsleep" id={id}>
       <div className="whatsleep__wrapper">
         <div className="whatsleep__images">
           <img src="/images/Vector.png" alt="sleeping girls" />

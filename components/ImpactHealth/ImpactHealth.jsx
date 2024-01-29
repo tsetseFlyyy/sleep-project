@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 
-const ImpactHealth = () => {
+const ImpactHealth = ({ id }) => {
   const { t, i18n } = useTranslation();
   const [modalTitle, setModalTitle] = useState();
   const [modalList, setModalList] = useState();
@@ -42,7 +42,7 @@ const ImpactHealth = () => {
   });
 
   return (
-    <section className="impact-health">
+    <section className="impact-health" id={id}>
       <h1 className="impact-health-title">{t("impact_on_health")}</h1>
       <div className="impact-health-container">
         <div className="health" onClick={setModalPhysical}>
@@ -277,7 +277,10 @@ const ImpactHealth = () => {
           <ol>
             {modalList &&
               modalList.map((item, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: t(item) }}></li>
+                <li
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: t(item) }}
+                ></li>
               ))}
           </ol>
           <p>{t(modalConclusion)}</p>

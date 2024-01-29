@@ -44,15 +44,15 @@ export default function Home() {
           </div>
           <Hero />
           <Agenda />
-          <Introduction />
-          <ImportanceSleep />
-          <Phases />
-          <SleepStages />
-          <ImpactHealth />
-          <Consequences />
-          <Chart />
-          <SleepRecommendations />
-          <Conclusion />
+          <Introduction id={"section1"} />
+          <ImportanceSleep id={"section2"} />
+          <Phases id={"section3"} />
+          <SleepStages id={"section4"} />
+          <ImpactHealth id={"section5"} />
+          <Consequences id={"section6"} />
+          <Chart id={"section7"} />
+          <SleepRecommendations id={"section8"} />
+          <Conclusion id={"section9"} />
         </main>
       </StyledEngineProvider>
     );
