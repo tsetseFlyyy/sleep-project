@@ -294,7 +294,7 @@ section {
 /*Importance Sleep*/
 
 .importance-sleep {
-  height: 100vh;
+  height: auto;
   /*background-image: url("/images/Group 5.png");*/
   /*background-color: #2d1674;*/
   background: linear-gradient(180deg, #081020 0%, #2d1674 100%);
